@@ -1,0 +1,6 @@
+{
+  "exec": "node dist/index.js",
+  "ext": "mjs,js,cjs,json",
+  "ignore": ["app", "test", "node_modules"],
+  "watch": ["dist"]
+}

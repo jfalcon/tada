@@ -1,0 +1,43 @@
+{
+  "name": "tada-server",
+  "description": "Todo MVP - Server",
+  "private": true,
+  "version": "0.0.1",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development run-p dev:watch dev:mon",
+    "dev:mon": "nodemon",
+    "dev:watch": "node esbuild.config.mjs --watch",
+    "build": "tsc && node esbuild.config.mjs --production",
+    "lint": "echo \"Todo\" && exit 0",
+    "preview": "npm run build && node dist/index.js",
+    "test": "echo \"Todo\" && exit 0",
+    "watch:build": "node esbuild.config.mjs --watch"
+  },
+  "engines": {
+    "node": ">=25.2.0",
+    "npm": ">=11.6.0"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.16.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.0.3",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.3",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.39.1",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "npm-run-all": "^4.1.5",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4"
+  }
+}

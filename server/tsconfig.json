@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "allowJs": true,                          // allow JavaScript files to be compiled
+    "baseUrl": ".",                           // required for path mapping
+		"forceConsistentCasingInFileNames": true, // ensure casing is correct in imports
+    "noImplicitAny": true,                    // report an error with an implied 'any' type
+		"strictNullChecks": true,                 // accounts for 'null' and 'undefined'
+		"strictFunctionTypes": true,              // ensure parameters and return values are compatible
+    "esModuleInterop": true,                  // import non-ES modules as default imports
+    "incremental": true,                      // only build modified files when compiling
+    "isolatedModules": true,                  // disallow features that require cross-file awareness
+    "lib": ["dom", "esnext"],                 // dom required for fetch definitions
+    "module": "esnext",                       // module system to output (CommonJS, ESNext, etc.)
+    "moduleResolution": "bundler",            // do not require filename extensions in imports
+		"moduleDetection": "force",               // treat files as modules even without import/export
+    "noEmit": true,                           // use a bundler for actual output
+    "paths": { "@/*": ["./*"] },              // relative to baseUrl, using root for flexibility
+    "resolveJsonModule": true,                // allows importing modules with a '.json' extension
+    "skipLibCheck": true,                     // only check used library code
+    "strict": true,                           // strict type checking for null, this, etc.
+    "target": "ES2022",                        // the ECMAScript version to output if emit is set
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

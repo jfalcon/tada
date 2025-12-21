@@ -1,0 +1,13 @@
+#task-form {
+  display: grid;
+  gap: 0.5rem;
+
+  > div {
+    display: flex;
+
+    &.button-row {
+      gap: 0.5rem;
+      justify-content: flex-end;
+    }
+  }
+}

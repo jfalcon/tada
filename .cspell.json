@@ -1,0 +1,59 @@
+{
+  "version": "0.2",
+  "allowCompoundWords": true,
+  "enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "git-commit",
+    "javascript",
+    "json",
+    "jsonc",
+    "markdown",
+    "plaintext",
+    "shellscript",
+    "text",
+    "toml",
+    "yaml",
+    "yml",
+    "zig"
+  ],
+  "dictionaries": [
+    "corp-terms",
+    "fonts",
+    "spanish"
+  ],
+  "language": "en",
+  "ignorePaths": [
+    "**/{,.}bin/",
+    "**/{,.}build/",
+    "**/{,.}cache/",
+    "**/{,.}compiled/",
+    "**/{,.}dist/",
+    "**/.git/",
+    "**/.hooks/",
+    "**/.idea/",
+    "**/.npm/",
+    "**/.out/",
+    "**/.svn/",
+    "**/.vs/",
+    "**/.vscode/",
+    "**/node_modules/",
+    "**/*.code-workspace",
+    "**/*.sublime-project",
+    "**/*.sublime-workspace"
+  ],
+  "ignoreRegExpList": [
+    "/^.*@import\\s*\\(.*\\).*$/gmi",
+    "/\\b[0-9A-Z\\/\\-_]+\\b/gm"
+  ],
+  "ignoreWords": [
+    "Brotli",
+    "brotlicommon",
+    "brotlidec",
+    "Zstandard"
+  ],
+  "words": [
+    "Uncategorized"
+  ]
+}
