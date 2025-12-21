@@ -1,0 +1,24 @@
+services:
+  db:
+    image: mariadb:latest
+    container_name: mariadb_container
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-password} # override via env var
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-tada}               # override via env var
+      MYSQL_USER: ${MYSQL_USER:-user}                       # override via env var
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-password}           # override via env var
+    volumes:
+      - db_data:/var/lib/mysql                              # persistent data volume
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"                          # configurable via env var
+  migration:
+    image: flyway/flyway:latest
+    depends_on:
+      - db
+    volumes:
+      - ./migrations:/flyway/sql                            # mount the migration scripts
+    command: -url=jdbc:mariadb://db:3306/${MYSQL_DATABASE:-tada} -user=${MYSQL_USER:-user} -password=${MYSQL_PASSWORD:-password} -connectRetries=60 migrate
+    restart: no
+volumes:
+  db_data:

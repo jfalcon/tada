@@ -1,0 +1,60 @@
+#task-list {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .controls {
+    display:flex;
+    gap:0.5rem;
+    align-items:center;
+
+    .spacer { flex: 1; }
+  }
+
+  .card-actions button { margin-left: 0.5rem; }
+
+  .task-data {
+    display: grid;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .task-group {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .task-items { display: grid; gap: 0.5rem; }
+
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 0.5rem;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+
+    &:nth-child(odd) { background: var(--card-bg); }
+    &:nth-child(even) { background: var(--card-bg-2); }
+    &:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(2,6,23,0.45); }
+  }
+
+  .due {
+    margin-top: 1rem;
+    font-size: 0.75em;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  #task-list {
+    .task-group {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), transparent);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}
