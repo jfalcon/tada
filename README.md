@@ -84,7 +84,10 @@ that the migrations in the `containers/migrations` folder is run, however.
 
 ## Running the Application
 
-Once the certificate and database are installed, it's simply a matter of:
+Once the certificate and database are installed, you'll need to create a `.env` file in the `server`
+folder to supply the application database credentials. Use the `.env.example` file as the basis.
+
+Once that's done, running the application is simply a matter of:
 
 ```bash
 # in the project's root directory
